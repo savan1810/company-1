@@ -1,0 +1,210 @@
+.navTrans{
+    animation-name: nav;
+    animation-duration: 600ms;
+    animation-timing-function: linear;
+}
+
+@keyframes nav {
+    0%{
+        height:0px
+    }
+    100%{
+        height:64px
+    }
+
+    
+}
+
+.buttonHover{
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-image: linear-gradient(white, white), radial-gradient(circle at top left, #000000,#ffcc00);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+}
+.buttonHover:hover{
+    background-image:linear-gradient(black, black), radial-gradient(circle at top left, #000000,#ffcc00) ;
+}
+.na{
+    animation-name: zoom-fade;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -webkit-animation-name: zoom-fade;
+    -webkit-animation-duration: 7s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+}
+
+@keyframes zoom-fade {
+    0%{
+        -webkit-transform: scale(0.6);
+    opacity: 0;
+    }
+    50%{
+        -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 1
+    }
+    100%{
+        -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+    }
+    
+}
+
+
+.bubble::before,.bubble1::before,.bubble2::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: rgb(0, 104, 240);
+    opacity: .1;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    transition: transform 0.7s;
+    
+}
+.bubble1::before{
+    background-color: rgb(241, 38, 38);
+}
+.bubble2::before{
+    background-color: rgb(0, 104, 240);
+}
+
+.bubble:hover:before{
+    transform: translate(100px,-15px);
+}
+.bubble1:hover:before{
+    transform: translate(180px,-15px);
+}
+.bubble2:hover:before{
+    transform: translate(120px,-15px);
+}
+
+.skillbar1{
+    animation-name: skill;
+    animation-timing-function: linear;
+  animation-duration: 2s;
+}
+
+@keyframes skill {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:95%
+    } 
+}
+.skillbar2{
+    animation-name: skill1;
+    animation-timing-function: linear;
+  animation-duration: 2s;
+}
+
+@keyframes skill1 {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:99%
+    } 
+}
+.skillbar3{
+    animation-name: skill2;
+    animation-timing-function: linear;
+  animation-duration: 2s;
+}
+
+@keyframes skill2 {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width:90%
+    } 
+}
+
+
+  
+  .swiper {
+    width: 90%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    font-size: 18px;
+    /* border: 1px solid gray; */
+
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+ 
+
+  .textStroke{
+    -webkit-text-stroke: 1px rgb(218, 216, 216); 
+  color: transparent;
+ 
+  
+   white-space: nowrap;
+   animation-name: text;
+    animation-timing-function: linear;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  }
+
+  @keyframes text {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+    
+  }
+
+
+  .provience_trans:after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: whitesmoke;
+    width: 0;
+    height: 1px;
+    transition:  0.7s;
+}
+
+.provience_trans:hover:after{
+    width:100%
+}
+
+.strokeEffect{
+    font-size: 100px;
+    -webkit-text-stroke: 1px rgb(134, 132, 132); 
+    -webkit-text-stroke-linejoin: round;
+    -webkit-text-stroke-dasharray: 100;
+    animation: animate 2s linear infinite ;
+}
+
+@keyframes animate {
+    100%{
+        -webkit-text-stroke-dashoffset: 100;
+    }
+    
+}
